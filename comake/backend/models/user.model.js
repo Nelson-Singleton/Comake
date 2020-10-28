@@ -6,10 +6,15 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
   username: String,
   email: String,
-  password: String
-})
-    // username: {
-    //     type: String,
+  password: String  
+},{timestamps: true}
+)
+const User = mongoose.model('User', userSchema)
+
+module.exports = User;
+
+// username: {
+  //     type: String,
     //     required: true,
     //     unique: true,
     //     trim: true,
@@ -53,7 +58,4 @@ const userSchema = new Schema({
 //     return Joi.validate(user, schema);
 // }
 
-const User = mongoose.model('User', userSchema)
-
-module.exports = User;
 // module.exports = validateUser;

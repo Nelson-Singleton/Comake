@@ -6,7 +6,8 @@ function Header (){
     return(
        <div className = "headerDiv">
             <nav className = "headerNav">
-                    <Link to = "/home"> Home </Link>  
+                    <Link to = "/home"> Home </Link>
+                    <Link to = "/dashboard"> Dashboard </Link>  
                     <Link to = "/login"> Login </Link>    
                     <Link to = "/register"> Sign Up </Link>                
             </nav>             
