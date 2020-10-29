@@ -6,9 +6,17 @@
   text-align: right;
 }
 
-/* .headerDiv{
+.navStyle{
   text-align: right;
-  width: 33%;
-  justify-content: flex-end;
-  
-} */
+}
+
+.cardStyle{
+  background-color: black;
+}
+
+.centeredDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
