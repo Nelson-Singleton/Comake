@@ -9,6 +9,8 @@ const postSchema = new Schema({
     description: { type: String, required: false },
     imageurl: { type: String, required: false },
     date: { type: Date, required: false },
+    likes: {type: Number},
+    comments: []
   }, {
     timestamps: true,
   });
