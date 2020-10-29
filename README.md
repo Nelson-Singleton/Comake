@@ -1,6 +1,6 @@
 # Comake
 
-While attending Lambda school, designed, with the assistance of my team, a small project by the name of Comake. We intended for Comake to be a small social media platform that
+While attending Lambda school, I designed, with the assistance of my team, a small project by the name of Comake. We intended for Comake to be a small social media platform that
 would allow community members to create posts highlighting the issues in their communities that needed tending to- allowing local government and problem solvers to more 
 easily collaborate with their communities.
 
