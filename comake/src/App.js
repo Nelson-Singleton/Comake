@@ -8,7 +8,7 @@ import LandingPage from './components/LandingPage'
 import Footer from './components/Footer'
 import Login from './components/Login'
 import Dashboard from './components/Dashboard'
-import Post from '../backend/models/post.model';
+import Post from '../src/components/Post';
 
 //todo: 
 //reorder schema to handle related objects
@@ -30,7 +30,8 @@ function App() {
             <Route path = '/home' component = {LandingPage}></Route>
             <Route path = '/login' render = {() => <Login/>}/>
             <Route path = '/dashboard' render = {() => <Dashboard/>}/>  
-            <Route path = '/new' render = {() => <Post/>}/>        
+            <Route path = '/new' render = {() => <Post/>}/>
+                    
           </Switch>  
         
         </div>     
