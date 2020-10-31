@@ -9,6 +9,12 @@ router.route('/').get((req, res) => {
       .then(posts => res.json(posts))
       .catch(err => res.status(400).json('Error: ' + err));
   });
+
+router.route('/:id').get((req, res) => {
+  Post.findById(req.params.id)
+  .then(post => res.json(post))
+  .catch(err => res.status(400).json(err))
+})
   
   router.route('/add').post((req, res) => {
     const username = req.body.username;
