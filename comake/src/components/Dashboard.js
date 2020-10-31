@@ -1,7 +1,8 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import {useHistory, useParams} from 'react-router-dom'
+import {useHistory, useParams, Link} from 'react-router-dom'
+
 
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
@@ -44,9 +45,15 @@ function Dashboard() {
   }, []);
 
   const history = useHistory()
+  
   const routeNewPost = () => {
       history.push('/new')
   }
+//   const routeToComments = () => {
+//     history.push(`/comment/${post._id}`)
+// }
+
+
 
   return (
     <Box justifyContent="center" alignItems="center" flexDirection="row">
@@ -63,11 +70,13 @@ function Dashboard() {
       </Box>
       
       {/* //////////////////////////////////////////////////// */}
+      
 <Box display="flex">
 <Grid container spacing={3} style={{ minHeight: '100vh' }}>
       {posts.map((post) => (
-          <Grid item xs = {3}>
-        <Card style={cardStyle} id={post.id} className="cardStyle" border = {1} borderColor="black">
+          
+          <Grid item xs = {3} key={post.createdAt}>
+        <Card style={cardStyle} id={post.id} className="cardStyle" border = {1}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -81,7 +90,7 @@ function Dashboard() {
               <Typography variant="body2" color="textSecondary" component="p">Posted by: {post.username}</Typography>
               <CardActions>
               <Typography variant="body2" color="textSecondary" component="p"><Button size="small" color="primary"> Upvote: </Button>{post.likes}</Typography>
-              <Button size="small" color="primary"> Comment </Button>
+              <Typography variant="body2" color="textSecondary" component="p"><Link to = {`/comment/${post._id}`}><Button size="small" color="primary"> Comment: </Button></Link></Typography>
               </CardActions>
             </CardContent>
           </CardActionArea>
