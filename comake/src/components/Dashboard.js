@@ -89,7 +89,7 @@ function Dashboard() {
               <Typography variant="body2" color="textSecondary" component="p">{post.description.slice(0, 100) + '...'}</Typography>
               <Typography variant="body2" color="textSecondary" component="p">Posted by: {post.username}</Typography>
               <CardActions>
-              <Typography variant="body2" color="textSecondary" component="p"><Button size="small" color="primary"> Upvote: </Button>{post.likes}</Typography>
+              <Button size="small" color="primary"> Upvote: {post.likes}</Button>
               <Typography variant="body2" color="textSecondary" component="p"><Link to = {`/comment/${post._id}`}><Button size="small" color="primary"> Comment: </Button></Link></Typography>
               </CardActions>
             </CardContent>

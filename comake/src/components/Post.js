@@ -15,10 +15,10 @@ export default function Post() {
         title: "",
         description: "",
         imageurl: "",
-        date: pickedDate    
+        date: pickedDate,    
         
        // user: {},
-        //comments: []    
+        comments: []    
     }
 
     const [newPost, setNewPost] = useState(initialValues)

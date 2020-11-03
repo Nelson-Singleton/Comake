@@ -22,18 +22,33 @@ router.route('/:id').get((req, res) => {
     const description = req.body.description
     const imageurl = req.body.imageurl
     const date = Date.parse(req.body.date)
+    
   
     const newPost = new Post({
       username,
       title,
       description,
       imageurl,
-      date
+      date,
+      
     });
   
     newPost.save()
       .then(() => res.json('post added!'))
       .catch(err => res.status(400).json('Error: ' + err));
   });
+
+  router.route('/:id').post((req, res) => {
+  })
+  //     req.params.id,
+  //     {$push: {"comments": { $each: req.body.comment}}},
+  //     {safe: true, upsert: true},
+  //       function(err, model) {
+  //           console.log(err);
+  //       }
+      
+  //   )
+    
+  // })
   
   module.exports = router;
